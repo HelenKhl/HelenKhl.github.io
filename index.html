@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Document</title>
+</head>
+<body>
+      
+    <div class="practice-area1">
+        
+        <div class='timed_output' onclick='myFunction()'>Click me</div>
+        <div class='timer-stop' onclick='stop()'>Click me</div>
+        <div class='clear_content' >Click me</div>
+
+        <div ></div>
+        <div ></div>
+        <div ></div>
+    </div>
+    <script>
+  let timeout=document.querySelector('.timed_output');
+ let clear=document.querySelector('.clear_content');
+  let t;
+     function helper(){
+         
+          timeout.innerHTML= "Hello,guest";
+          console.log(23);
+     }
+     function myFunction(){
+       t=setTimeout(helper, 5*1000);
+     }
+     function stop(){
+         clearTimeout(t);
+         console.log(45);
+     } 
+    clear.addEventListener('click', function(){
+        timeout.innerHTML='Click me';
+        console.log(90);
+    })
+   
+  
+    </script>
+</body>
+</html>
